@@ -5,13 +5,13 @@ To the best of our knowledge, this is the first work that investigates the
 security of relational databases protected by SSE schemes.
 
 We propose three attacks on searchable encrypted relational databases
-1. #Relational-Count Attack: 
+1. Relational-Count Attack: 
 This attack requires only the attacker's knowledge about the frequency distribution of the protected   relational database under attack which is a reasonable requirement compared to the joint frequency knowledge required by previous inference attacks.
 
-2. #Attribute-Name Recovery Attack: 
+2. Attribute-Name Recovery Attack: 
 This attack enables a passive adversary with only basic knowledge about the meta-data of the protected relational database to distinguish between observed queries whose attribute names are different. Assuming enough queries are issued, an attacker finds the queries belonging to the same attribute name or column.
 
-3. #Combining the above two attacks:
+3. Combining the above two attacks:
 Under the assumption that all queries have been issued, we are able to show that the security provided by SSE schemes is equivalent to the security provided by determinitic encryption when it comes to protect a relational database.
 
 
@@ -27,7 +27,7 @@ Under the assumption that all queries have been issued, we are able to show that
 #Compile & Run:
 
 
-1. #Implementation of the standard Count Attack proposed by Cash et al.
+1. Implementation of the standard Count Attack proposed by Cash et al.
     compile: g++ -o countAttack countAttack.cpp -O3 -std=c++11
     run: ./countAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
    or
@@ -36,7 +36,7 @@ Under the assumption that all queries have been issued, we are able to show that
    given the full frequency and joint frequency knowledge given from the bank3720 data. The second execution changes the roles
    in the first execution, so here bank3720 will be the target data and bankTest will be the known data.
    
-2. #Implementation of our Relational-Count Attack (Abdelraheem et al.):
+2. Implementation of our Relational-Count Attack (Abdelraheem et al.):
    compile: g++ -o relationalCountAttack relationalCountAttack.cpp -O3 -std=c++11
    run:  ./relationalCountAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
   or
