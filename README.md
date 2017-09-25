@@ -29,6 +29,7 @@ Under the assumption that all queries have been issued, we are able to show that
 
 1. Implementation of the standard Count Attack proposed by Cash et al.
     compile: g++ -o countAttack countAttack.cpp -O3 -std=c++11
+    
     run on the bank dataset[1]: ./countAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
    
    or
@@ -44,6 +45,7 @@ Under the assumption that all queries have been issued, we are able to show that
    
 2. Implementation of our Relational-Count Attack (Abdelraheem et al.):
    compile: g++ -o relationalCountAttack relationalCountAttack.cpp -O3 -std=c++11
+   
    run on the bank dataset:  ./relationalCountAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
   
   or
