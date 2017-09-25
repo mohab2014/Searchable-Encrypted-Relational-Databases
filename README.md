@@ -29,17 +29,23 @@ Under the assumption that all queries have been issued, we are able to show that
 
 1. Implementation of the standard Count Attack proposed by Cash et al.
     compile: g++ -o countAttack countAttack.cpp -O3 -std=c++11
-    run: ./countAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
+    run on the bank dataset: ./countAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
    or
-   ./countAttackPosted bankTest/bankTestClientlog.txt bankTest/observed1-3720-3720-test.txt 3720 bankKeywords.txt bank3720/observed1-3720-3720-special.txt 3720 4521 bank3720/BANKSPECIALqueryClientlog.txt bank3720/ 
+   ./countAttack bankTest/bankTestClientlog.txt bankTest/observed1-3720-3720-test.txt 3720 bankKeywords.txt bank3720/observed1-3720-3720-special.txt 3720 4521 bank3720/BANKSPECIALqueryClientlog.txt bank3720/ 
+   
+  run on the Census dataset:   ./countAttackPosted census3993/CENSUSTEST1queryClientlog.txt census3993/observed1-3993-3993-test1.txt 3993 census-keywords.txt census3993-2/observed1-3993-3993-test2.txt 3993 299285 census3993-2/CENSUSTEST2queryClientlog.txt census3993-2
+
+   
    Note that the first execution assumes that the target data is bankTest where the attacker's goal is to break query privacy
    given the full frequency and joint frequency knowledge given from the bank3720 data. The second execution changes the roles
    in the first execution, so here bank3720 will be the target data and bankTest will be the known data.
    
 2. Implementation of our Relational-Count Attack (Abdelraheem et al.):
    compile: g++ -o relationalCountAttack relationalCountAttack.cpp -O3 -std=c++11
-   run:  ./relationalCountAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
+   run on the bank dataset:  ./relationalCountAttack bank3720/BANKSPECIALqueryClientlog.txt bank3720/observed1-3720-3720-special.txt 3720 bankKeywords.txt bankTest/observed1-3720-3720-test.txt 3720 4521 bankTest/bankTestClientlog.txt bankTest 
   or
   ./relationalCountAttack bankTest/bankTestClientlog.txt bankTest/observed1-3720-3720-test.txt 3720 bankKeywords.txt bank3720/observed1-3720-3720-special.txt 3720 4521 bank3720/BANKSPECIALqueryClientlog.txt bank3720/ 
 
+run on the Census dataset:
+./relationalCountAttack census3993/CENSUSTEST1queryClientlog.txt census3993/observed1-3993-3993-test1.txt 3993 census-keywords.txt census3993-2/observed1-3993-3993-test2.txt 3993 299285 census3993-2/CENSUSTEST2queryClientlog.txt census3993-2
    
