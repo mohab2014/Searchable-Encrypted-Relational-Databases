@@ -1,5 +1,5 @@
 # Searchable-Encrypted-Relational-Databases
-Inference Attacks on Searchable Encrypted Relational Databases
+Inference Attacks on Searchable Encrypted Relational Databases were proposed in [3]. 
 
 To the best of our knowledge, this is the first work that investigates the
 security of relational databases protected by SSE schemes.
@@ -13,13 +13,6 @@ This attack enables a passive adversary with only basic knowledge about the meta
 
 3. Combining the above two attacks:
 Under the assumption that all queries have been issued, we are able to show that the security provided by SSE schemes is equivalent to the security provided by determinitic encryption when it comes to protect a relational database.
-
-
-
-
-
-
-
 
 
 
@@ -59,3 +52,4 @@ run on the Census dataset:
 References:
 1. https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 2. https://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD)
+3. https://link.springer.com/chapter/10.1007/978-3-319-67816-0_5
