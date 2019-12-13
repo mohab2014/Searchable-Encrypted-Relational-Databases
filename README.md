@@ -1,4 +1,4 @@
-# Searchable-Encrypted-Relational-Databases
+# Attacks on Symmetric Searchable Encryption Schemes Protecting Relational Databases
 Inference Attacks on Searchable Encrypted Relational Databases were proposed in [3]. 
 
 To the best of our knowledge, this is the first work that investigates the
