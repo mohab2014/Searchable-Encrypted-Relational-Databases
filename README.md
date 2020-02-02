@@ -15,7 +15,7 @@ This attack enables a passive adversary with only basic knowledge about the meta
 Under the assumption that all queries have been issued, we are able to show that the security provided by SSE schemes is equivalent to the security provided by determinitic encryption when it comes to protect a relational database.
 
 
-
+New practical attacks that recovers the attribute of a query has been proposed in [4] and its implementation can be accessed from this link https://github.com/mohab2014/attacks-on-SSE-schemes.
 
 #Compile & Run:
 
@@ -53,3 +53,4 @@ References:
 1. https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 2. https://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD)
 3. https://link.springer.com/chapter/10.1007/978-3-319-67816-0_5
+4. https://eprint.iacr.org/2018/715.pdf
